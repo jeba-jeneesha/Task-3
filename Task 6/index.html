@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Based Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calc-container">
+    <h2>Calculator</h2>
+    <form id="calc-form">
+      <input type="number" id="num1" step="any" placeholder="First number" required>
+      
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">−</option>
+        <option value="*">×</option>
+        <option value="/">÷</option>
+      </select>
+      
+      <input type="number" id="num2" step="any" placeholder="Second number" required>
+      
+      <button type="submit">Calculate</button>
+    </form>
+
+    <div id="result" class="result">Result: </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

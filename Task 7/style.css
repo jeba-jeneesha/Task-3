@@ -1,0 +1,85 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background:black;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+.title {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.carousel {
+  position: relative;
+  width: 800px;
+  max-width: 95%;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.slides {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
+}
+
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 50%;
+  user-select: none;
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+.prev:hover, .next:hover { background:transparent }
+
+
+.dots {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+.dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dots span.active {
+  background: white;
+}
